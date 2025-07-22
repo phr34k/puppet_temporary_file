@@ -1,0 +1,15 @@
+A puppet module that defines a transient file resource that who's lifetime is managed and automatically clean-up when there are no dependants anymore.
+
+```
+temporary_file { 'temp_script':
+  source => 'http://192.168.2.1/scripts/test.ps1',
+  path   => 'C:\Temp\script.ps1', 
+}
+
+exec { 'run_custom_script':
+  command  => 'cd C:\Temp; ./script.ps1',
+  require  => Temporary_file['temp_script'],
+  provider => 'pwsh',
+  logoutput => true, 
+}
+```
