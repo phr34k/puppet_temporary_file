@@ -1,6 +1,6 @@
 {
-  "name": "temporary_file",
-  "version": "0.1.0",
+  "name": "phr34k-tempfile",
+  "version": "0.1.1",
   "author": "Lawrence Kok",
   "summary": "Manages temporary files with automatic cleanup after Puppet stages.",
   "license": "proprietary",
